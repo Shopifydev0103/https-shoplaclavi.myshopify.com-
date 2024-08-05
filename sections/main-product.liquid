@@ -2,6 +2,7 @@
 {{ 'product-information.css' | asset_url | stylesheet_tag }}
 
 {{ 'product-page.css' | asset_url | stylesheet_tag }}
+
 {% assign hasSizeOption = false %}
 {% for option in product.options_with_values %}
   {% if option.name contains "Size" %}
@@ -142,7 +143,7 @@
     <div class="detail product-column-right" data-cc-animate data-cc-animate-delay="0.2s">
       <div class="product-form{% if section.settings.enable_sticky_columns %} sticky-content-container{% endif %}" data-ajax-add-to-cart="true" data-product-id="{{ product.id }}" data-enable-history-state="true" data-show-sale-price-label="{{ settings.prod_sale_show }}" data-show-preorder-label="{{ show_preorder_label }}">
         <div class="product-detail-top custom-right">
-          <div class="product-detail-inner">
+          <div class="product-detail-inner ">
             {% for block in section.blocks %}
               {% case block.type %}
                 {% when '@app' %}
@@ -167,11 +168,33 @@
                   {% endif %}
 
                   <div class="title-row" {{ block.shopify_attributes }}>
-                    <h1 class="title">{{ product.title }}</h1>
+                    {% style %}
+                      .product-title--{{ section.id }} {
+                        font-size: {{ block.settings.product_title_font }}px !important;
+                      }
+
+                      @media (max-width: 768px) {
+                        .product-title--{{ section.id }} {
+                        font-size: {{ block.settings.product_title_font_mobile }}px !important;
+                      }
+                      }
+                    {% endstyle %}
+                    <h1 class="title product-title--{{ section.id }}">{{ product.title }}</h1>
                     <div data-shop-id="{{shop.id}}" product-id="{{ product.id }}" class="ddreview-star"></div>
                   </div>
 
                 {% when 'price' %}
+                  {% style %}
+                    body.template-suffix-custom-product .section-main-product .product-detail .price-container .price-area .current-price.theme-money {
+                      font-size: {{ block.settings.price_font_size }}px !important;
+                    }
+
+                    @media (max-width: 768px ) {
+                      body.template-suffix-custom-product .section-main-product .product-detail .price-container .price-area .current-price.theme-money {
+                        font-size: {{ block.settings.price_font_size_mobile }}px !important;
+                      }
+                    }
+                  {% endstyle %}
                   <div class="price-container" {{ block.shopify_attributes }}>
                     <div>
                       {%- liquid
@@ -185,6 +208,7 @@
                       <div class="price-area">
                         {% if current_variant %}
                           <div class="price h4-style {% if current_variant.compare_at_price > current_variant.price %}on-sale{% endif %}">
+                            
                             <span class="current-price theme-money">
                               {%- if settings.product_currency_code_enabled -%}
                                 {{- current_variant.price | money_with_currency -}}
@@ -276,7 +300,27 @@
                       
                       
                     {% else %}
-                      <div class="product-description rte cf">
+
+                    {% style %}
+                    .product-description--{{ section.id }} {
+                      margin-top: {{ block.settings.product_description_margin_top }}px;
+                      margin-bottom: {{ block.settings.product_description_margin_bottom }}px;
+                    }
+                    .product-description--{{ section.id }} p {
+                      font-size: {{ block.settings.product_description_font }}px !important;
+                    }
+
+                    @media (max-width: 768px) {
+                      .product-description--{{ section.id }} {
+                      margin-top: {{ block.settings.product_description_margin_top_mobile }}px;
+                      margin-bottom: {{ block.settings.product_description_margin_bottom_mobile }}px;
+                    } 
+                      .product-description--{{ section.id }} p {
+                      font-size: {{ block.settings.product_description_font_mobile }}px !important;
+                    }
+                    }
+                    {% endstyle %}
+                      <div class="product-description rte cf product-description--{{ section.id }}">
                         {%- if block.settings.icon == blank -%}
                           {{- product.description -}}
                         {%- else -%}
@@ -1142,13 +1186,55 @@
       {
         "type": "title",
         "name": "Title",
-        "limit": 1
+        "limit": 1,
+        "settings": [
+          {
+            "type": "range",
+            "id": "product_title_font",
+            "min": 10,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "label": "Product title font-size",
+            "default": 48
+          },
+          {
+            "type": "range",
+            "id": "product_title_font_mobile",
+            "min": 10,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "label": "Mobile Product title font-size",
+            "default": 24
+          }
+        ]
       },
       {
         "type": "price",
         "name": "Price",
         "limit": 1,
         "settings": [
+          {
+            "type": "range",
+            "id": "price_font_size",
+            "min": 10,
+            "max": 40,
+            "step": 1,
+            "unit": "px",
+            "label": "Price font-size",
+            "default": 24
+          },
+          {
+            "type": "range",
+            "id": "price_font_size_mobile",
+            "min": 10,
+            "max": 40,
+            "step": 1,
+            "unit": "px",
+            "label": "Mobile Price font-size",
+            "default": 17
+          },
           {
             "type": "checkbox",
             "id": "show_tax_and_shipping",
@@ -1169,6 +1255,26 @@
         "name": "Description",
         "limit": 1,
         "settings": [
+          {
+            "type": "range",
+            "id": "product_description_font",
+            "min": 10,
+            "max": 60,
+            "step": 1,
+            "unit": "px",
+            "label": "product description font-size",
+            "default": 24 
+          },
+          {
+            "type": "range",
+            "id": "product_description_font_mobile",
+            "min": 10,
+            "max": 60,
+            "step": 1,
+            "unit": "px",
+            "label": "Mobile product description font-size",
+            "default": 18 
+          },
           {
             "type": "checkbox",
             "id": "show_in_tab",
@@ -1334,6 +1440,46 @@
             "id": "show_in_quickbuy",
             "label": "Show in quick buy",
             "default": false
+          },
+          {
+            "type": "range",
+            "id": "product_description_margin_top",
+            "min": 0,
+            "max": 100,
+            "step": 2,
+            "unit": "px",
+            "label": "Margin top",
+            "default": 0
+          },
+          {
+            "type": "range",
+            "id": "product_description_margin_bottom",
+            "min": 0,
+            "max": 100,
+            "step": 2,
+            "unit": "px",
+            "label": "Margin bottom",
+            "default": 64
+          },
+          {
+            "type": "range",
+            "id": "product_description_margin_top_mobile",
+            "min": 0,
+            "max": 100,
+            "step": 2,
+            "unit": "px",
+            "label": "Mobile Margin top",
+            "default": 0
+          },
+          {
+            "type": "range",
+            "id": "product_description_margin_bottom_mobile",
+            "min": 0,
+            "max": 100,
+            "step": 2,
+            "unit": "px",
+            "label": "Mobile Margin bottom",
+            "default": 64
           }
         ]
       },
