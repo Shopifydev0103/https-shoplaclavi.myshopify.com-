@@ -1,0 +1,233 @@
+{
+  "sections": {
+    "rewards-page": {
+      "type": "rewards",
+      "settings": {
+      }
+    },
+    "image_with_text_overlay_HAAL8E": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/2nAUs2.jpg",
+        "image_position": "center center",
+        "mobile_image_position": "center center",
+        "height": "fixed",
+        "height_desktop": 520,
+        "height_mobile": 460,
+        "image_link": "",
+        "subheading": "",
+        "title": "Laclavi Loyalty Program",
+        "title_size": 70,
+        "title_size_mobile": 46,
+        "use_h1": false,
+        "text": "",
+        "enlarge_text": false,
+        "button_label_1": "",
+        "button_url_1": "",
+        "button_label_2": "",
+        "button_url_2": "",
+        "button_label_3": "",
+        "button_url_3": "",
+        "button_label_4": "",
+        "button_url_4": "",
+        "text_alignment": "center center",
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "no_background"
+      }
+    },
+    "multi_column_XBbhHy": {
+      "type": "multi-column",
+      "blocks": {
+        "text_block_74jbTb": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/signup.svg",
+            "image_width": 150,
+            "title": "Join",
+            "text": "<p>Sign up or log in to start earning straight away.<\/p>",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "text_block_EdAfWL": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/earn-more-points.svg",
+            "image_width": 150,
+            "title": "Earn",
+            "text": "<p>Automatically collect points with every purchase.<\/p>",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "text_block_jJQPmE": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/custom.svg",
+            "image_width": 150,
+            "title": "Redeem",
+            "text": "<p>Redeem your points for discount codes.<\/p>",
+            "button_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_74jbTb",
+        "text_block_EdAfWL",
+        "text_block_jJQPmE"
+      ],
+      "settings": {
+        "title": "How it works",
+        "text_alignment": "center",
+        "button_style": "primary",
+        "use_alt_bg": false
+      }
+    },
+    "custom_image_with_text_MACVJa": {
+      "type": "custom-image-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/20ss7O_1.jpg",
+        "image_position": "center center",
+        "mobile_image_position": "center center",
+        "height": "fixed",
+        "height_desktop": 560,
+        "height_mobile": 700,
+        "image_link": "",
+        "subheading": "",
+        "title": "Welcome to our rewards page",
+        "title_size": 42,
+        "title_size_mobile": 46,
+        "use_h1": false,
+        "text": "<p>Earn reward points on every order and redeem them for store vouchers to use on future purchases.<\/p>",
+        "enlarge_text": false,
+        "button_label_1": "Join Now & Login",
+        "button_url_1": "",
+        "button_label_2": "",
+        "button_url_2": "",
+        "button_label_3": "",
+        "button_url_3": "",
+        "button_label_4": "",
+        "button_url_4": "",
+        "text_alignment": "center center",
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "no_background"
+      }
+    },
+    "image_with_text_RALDDD": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/LRgT8Z_1.jpg",
+        "image_width": 700,
+        "subheading": "",
+        "title": "Earn points for every order placed",
+        "use_h1": false,
+        "text": "<p>Get 5% back on every purchase, awarded as points that can easily be redeemed for store credits.<\/p>",
+        "button_label": "Ways to earn",
+        "button_link": "",
+        "button_style": "link",
+        "image_position": "right",
+        "text_alignment": "left",
+        "use_alt_bg": false
+      }
+    },
+    "image_with_text_fNKzz3": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Untitled_design_6.png",
+        "image_width": 700,
+        "subheading": "",
+        "title": "Redeem points for rewards",
+        "use_h1": false,
+        "text": "<p>Redeem points on your next order, or save them up for a larger purchase later on.<\/p>",
+        "button_label": "Ways to redeem",
+        "button_link": "",
+        "button_style": "link",
+        "image_position": "left",
+        "text_alignment": "left",
+        "use_alt_bg": false
+      }
+    },
+    "collapsible_tabs_qEWhUk": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "question_7fx7hK": {
+          "type": "question",
+          "settings": {
+            "title": "Are your clothes suitable for all weather conditions?",
+            "answer": "<p>Absolutely. Our golf clothing is designed to perform in all weather conditions, whether it's scorching hot or chilly and windy. We offer lightweight, breathable options for hot days and insulated, moisture-wicking options for cooler weather, ensuring that you stay comfortable and focused on your game no matter the conditions.<\/p>"
+          }
+        },
+        "question_tpXNVw": {
+          "type": "question",
+          "settings": {
+            "title": "Do your clothes offer UV protection?",
+            "answer": "<p>Yes, many of our garments are specially designed to provide UPF (Ultraviolet Protection Factor) protection, shielding you from the sun's harmful rays during long days on the course. Look for items labeled with UPF ratings for added sun protection.<\/p>"
+          }
+        },
+        "question_XdTrjD": {
+          "type": "question",
+          "settings": {
+            "title": "How do I care for my golf apparel to ensure longevity?",
+            "answer": "<p>To prolong the life of your golf apparel, we recommend washing them in cold water with like colors and mild detergent. Avoid using bleach or fabric softeners, as they can damage the fabric's performance properties. Hang dry or tumble dry on low heat to prevent shrinkage and maintain the integrity of the materials.<\/p>"
+          }
+        },
+        "question_LMQwKt": {
+          "type": "question",
+          "settings": {
+            "title": "Can I return or exchange items if they don't fit?",
+            "answer": "<p>Yes, we offer hassle-free returns and exchanges within a certain timeframe (typically 30 days) of purchase. If your golf apparel doesn't fit or meet your expectations, simply contact our customer service team, and they'll assist you with the return or exchange process.<\/p>"
+          }
+        },
+        "question_zc7aLW": {
+          "type": "question",
+          "settings": {
+            "title": "Are your clothes suitable for both men and women?",
+            "answer": "<p>Yes, we offer a diverse selection of golf apparel for both men and women, including shirts, pants, shorts, outerwear, and accessories. Our designs are tailored to fit the unique needs and preferences of golfers of all genders, ensuring that everyone can look and feel their best on the course.<\/p>"
+          }
+        },
+        "question_rLFVtQ": {
+          "type": "question",
+          "settings": {
+            "title": "Do you offer customization or personalization options?",
+            "answer": "<p>While we don't currently offer customization or personalization services, we're always exploring new ways to enhance the customer experience. Feel free to share any feedback or suggestions you have regarding customization options, and we'll take them into consideration for future offerings.<\/p>"
+          }
+        },
+        "question_N9dcMq": {
+          "type": "question",
+          "settings": {
+            "title": "Where are your products manufactured?",
+            "answer": "<p>We work with a network of trusted manufacturing partners located both domestically and internationally to produce our golf apparel. Our priority is to maintain high standards of quality and craftsmanship while also ensuring ethical and sustainable manufacturing practices throughout our supply chain.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_7fx7hK",
+        "question_tpXNVw",
+        "question_XdTrjD",
+        "question_LMQwKt",
+        "question_zc7aLW",
+        "question_rLFVtQ",
+        "question_N9dcMq"
+      ],
+      "settings": {
+        "title": "THE LACLAVI CLUB FAQ'S",
+        "icon-type": "arrow"
+      }
+    }
+  },
+  "order": [
+    "rewards-page",
+    "image_with_text_overlay_HAAL8E",
+    "multi_column_XBbhHy",
+    "custom_image_with_text_MACVJa",
+    "image_with_text_RALDDD",
+    "image_with_text_fNKzz3",
+    "collapsible_tabs_qEWhUk"
+  ]
+}
