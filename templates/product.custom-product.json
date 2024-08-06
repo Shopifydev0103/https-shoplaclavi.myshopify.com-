@@ -6,11 +6,15 @@
         "title": {
           "type": "title",
           "settings": {
+            "product_title_font": 72,
+            "product_title_font_mobile": 24
           }
         },
         "price": {
           "type": "price",
           "settings": {
+            "price_font_size": 24,
+            "price_font_size_mobile": 17,
             "show_tax_and_shipping": false,
             "enable_product_reviews_by_price": true
           }
@@ -18,10 +22,16 @@
         "description": {
           "type": "description",
           "settings": {
+            "product_description_font": 24,
+            "product_description_font_mobile": 18,
             "show_in_tab": false,
             "open_tab": false,
             "icon": "",
-            "show_in_quickbuy": false
+            "show_in_quickbuy": false,
+            "product_description_margin_top": 0,
+            "product_description_margin_bottom": 64,
+            "product_description_margin_top_mobile": 0,
+            "product_description_margin_bottom_mobile": 64
           }
         },
         "vendor": {
@@ -60,6 +70,7 @@
         },
         "accordion_XQzWKG": {
           "type": "accordion",
+          "disabled": true,
           "settings": {
             "title": "Shipping",
             "icon": "",
@@ -71,6 +82,7 @@
         },
         "accordion_iBHnhf": {
           "type": "accordion",
+          "disabled": true,
           "settings": {
             "title": "Return policy",
             "icon": "",
@@ -103,7 +115,14 @@
         "enable_zoom": false,
         "enable_video_looping": false,
         "enable_var_img_grouping": true,
-        "var_img_grouping_option": "Color,Colour,Couleur,Farbe"
+        "var_img_grouping_option": "Color,Colour,Couleur,Farbe",
+        "product_list_row": true,
+        "product_list_title": 48,
+        "product_list_title_mobile": 24,
+        "product_list_item_font": 18,
+        "product_list_item_font_mobile": 18,
+        "product_list_item_price": 16,
+        "product_list_item_price_mobile": 16
       }
     },
     "product_info_qK3HK7": {
@@ -144,6 +163,18 @@
         "text_alignment": "center",
         "full_width": false,
         "use_alt_bg": false
+      }
+    },
+    "product_image_banner_4JED8t": {
+      "type": "product-image-banner",
+      "settings": {
+        "background": "shopify:\/\/shop_images\/desktop-hero-image.jpg",
+        "title": "Knit Polo Sweater",
+        "title_font": 72,
+        "title_font_mobile": 40,
+        "description": "Knit polo sweater in dual faced cotton and merino blend. The unique blend and knitting technique offers both good warmth and ventilation at the same time. Hal-zip centerline opening.",
+        "description_font": 17,
+        "description_font_mobile": 14
       }
     },
     "product_info_accordion_664tJP": {
@@ -189,6 +220,7 @@
     "main",
     "product_info_qK3HK7",
     "rich_text_4Ptitz",
+    "product_image_banner_4JED8t",
     "product_info_accordion_664tJP",
     "recommendations",
     "recently",

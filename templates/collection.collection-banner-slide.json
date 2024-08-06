@@ -37,8 +37,7 @@
         "overlay_style": "shadow",
         "slide_transition": "fade",
         "slide_navigation": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7
+        "autoplay": true
       }
     },
     "main": {

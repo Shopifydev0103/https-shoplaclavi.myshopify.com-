@@ -1328,6 +1328,11 @@
         "label": "Enable Dynamic Checkout In Cart Drawer",
         "id": "enable_dynamic_checkout",
         "default": true
+      },
+      {
+        "type": "text",
+        "id": "limit_free_shipping",
+        "label": "Limit free shipping price"
       }
     ]
   },

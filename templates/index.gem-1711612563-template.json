@@ -201,8 +201,7 @@
         "overlay_style": "no_background",
         "slide_transition": "slide_fade",
         "slide_navigation": "dots",
-        "autoplay": true,
-        "autoplay_speed": 6
+        "autoplay": true
       }
     },
     "df7a4fa5-867c-4c2e-a89e-869fd9a8abac": {

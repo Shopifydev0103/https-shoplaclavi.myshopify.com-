@@ -882,6 +882,34 @@ cart-drawer#cart-drawer-right.drawer.active+.overlay-drawer {
 cart-drawer#cart-drawer-right.drawer .cart-drawer {
   background-color: #F7F7F7;
 }
+.cart-progress {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cart-progress-bar--wrapper {
+    background: #D9D9D9;
+    height: 6px;
+    border-radius: 10px;
+}
+.cart-progress-bar-visialbe {
+  height: 6px;
+  background-color: #1F512C;
+  width: 0;
+  border-radius: 10px;
+}
+.shipping-rest-pay {
+  font-family: Halyard Display;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: black;
+}
+.cart-progress-free--content {
+  display: none;
+}
 
 cart-drawer#cart-drawer-right .drawer__inner {
   box-shadow: -4px 4px 10px rgb(0 0 0 / 20%);

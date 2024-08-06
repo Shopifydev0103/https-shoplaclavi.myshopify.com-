@@ -1,3 +1,23 @@
+{% style %}  
+   {% if section.settings.slider_allow_position %}  
+      .shopify-section .custom-product-info-accordion .set-content .set-content-row .gallery-slider .slick-prev {  
+         top: -60px;  
+         left: auto;  
+         right: 80px;
+         background: white;
+      }
+      .shopify-section .custom-product-info-accordion .set-content .set-content-row .gallery-slider .slick-prev svg,
+      .shopify-section .custom-product-info-accordion .set-content .set-content-row .gallery-slider .slick-next svg {
+         fill: #353535;
+      }  
+      .shopify-section .custom-product-info-accordion .set-content .set-content-row .gallery-slider .slick-next {  
+         top: -60px;  
+         right: 8px;  
+         background: white;
+      }
+   {% endif %}  
+{% endstyle %}  
+
 <div class="custom-product-info-accordion">
       <div class="custom-container">
          <div class="set design-featured">
@@ -281,7 +301,14 @@ $(document).ready(function() {
 {
   "name": "Product Info Accordion",
   "tag": "section",
-  "settings": [],
+  "settings": [
+      {
+        "type": "checkbox",
+        "id": "slider_allow_position",
+        "label": "Slider allow position top",
+        "default": true
+      }
+  ],
   "blocks": [],
   "presets": [
     {

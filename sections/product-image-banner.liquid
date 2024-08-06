@@ -1,0 +1,142 @@
+
+
+{% style %}
+    .product-image-banner--set {
+        height: 900px;
+        background-size: cover;
+    }
+    .product-image-banner--wrapper {
+        position: relative;
+        height: 100%;
+    }
+    .product-image-banner--set .main-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .product-image-banner--set .main-content h1 {
+        font-family: IvyOra Display;
+        font-size: {{ section.settings.title_font }}px;
+        font-weight: 400;
+        line-height: 65px;
+        text-align: center;
+        color: white;
+        text-transform: capitalize;
+        margin-bottom: 19px;
+    }
+    .product-image-banner--set .main-content span {
+        font-family: Halyard Display;
+        font-size: {{ section.settings.description_font }}px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: center;
+        color: white;
+    }
+    @media (max-width: 768px) {
+        .product-image-banner--set {
+            height: 540px;
+        }        
+        .product-image-banner--set .main-content {
+            width: 317px;
+        }
+        .product-image-banner--set .main-content h1 {
+            font-family: IvyOra Display;
+            font-size: {{ section.settings.title_font_mobile }}px;
+            font-weight: 400;
+            line-height: 36px;
+            text-align: center;
+        }
+        .product-image-banner--set .main-content span {
+            font-size: {{ section.settings.description_font_mobile }}px;
+            font-weight: 400;
+            line-height: 21px;
+        }
+    }
+{% endstyle %}
+
+<div class="product-image-banner--set" style="background-image: url('{{ section.settings.background.src | img_url: "master" }}')">
+    <div class="product-image-banner--wrapper">
+        <div class="main-content">
+            {%- if section.settings.title -%}
+                <h1>{{ section.settings.title }}</h1>
+            {%- endif -%}
+            {% if section.settings.description %}
+                <span>{{ section.settings.description }}</span>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+
+
+
+{% schema %}
+    {
+        "name": "product image banner",
+        "class": "product-image-banner",
+        "settings": [
+            {
+              "type": "image_picker",
+              "id": "background",
+              "label": "Background"
+            },
+            {
+              "type": "text",
+              "id": "title",
+              "label": "title"
+            },
+            {
+              "type": "range",
+              "id": "title_font",
+              "min": 10,
+              "max": 100,
+              "step": 1,
+              "unit": "px",
+              "label": "Title font-size",
+              "default": 72
+            },
+            {
+              "type": "range",
+              "id": "title_font_mobile",
+              "min": 10,
+              "max": 60,
+              "step": 1,
+              "unit": "px",
+              "label": "Mobile Title font-size",
+              "default": 40
+            },
+            {
+              "type": "text",
+              "id": "description",
+              "label": "Description"
+            },
+            {
+              "type": "range",
+              "id": "description_font",
+              "min": 10,
+              "max": 100,
+              "step": 1,
+              "unit": "px",
+              "label": "Description font-size",
+              "default": 17
+            },
+            {
+              "type": "range",
+              "id": "description_font_mobile",
+              "min": 10,
+              "max": 60,
+              "step": 1,
+              "unit": "px",
+              "label": "Mobile Description font-size",
+              "default": 14
+            }
+        ],
+        "presets": [
+            {
+                "name": "product-image-banner"
+            }
+        ]
+    }
+{% endschema %}

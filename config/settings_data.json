@@ -98,6 +98,10 @@
           "settings": {
             "logo_img_width_int": 155,
             "mobile_logo_img_width_int": 130,
+            "menu_color": "#000000",
+            "menu_hover_color": "#000000",
+            "submenu_color": "#000000",
+            "submenu_hover_color": "#000000",
             "enable_sticky": true,
             "menu_layout": "inline-menu-left"
           }
@@ -295,6 +299,10 @@
           "type": "header",
           "settings": {
             "logo_img_width_int": 150,
+            "menu_color": "#000000",
+            "menu_hover_color": "#000000",
+            "submenu_color": "#000000",
+            "submenu_hover_color": "#000000",
             "enable_sticky": true,
             "menu_layout": "inline-menu-left"
           }
@@ -521,6 +529,10 @@
           "settings": {
             "logo_img_width_int": 125,
             "mobile_logo_img_width_int": 100,
+            "menu_color": "#000000",
+            "menu_hover_color": "#000000",
+            "submenu_color": "#000000",
+            "submenu_hover_color": "#000000",
             "enable_sticky": true,
             "menu_layout": "underneath"
           }
@@ -732,6 +744,10 @@
           "type": "header",
           "settings": {
             "logo_img_width_int": 75,
+            "menu_color": "#000000",
+            "menu_hover_color": "#000000",
+            "submenu_color": "#000000",
+            "submenu_hover_color": "#000000",
             "enable_sticky": true,
             "menu_layout": "inline-menu-center"
           }
@@ -985,6 +1001,7 @@
     "favicon": "shopify:\/\/shop_images\/logo_-21.png",
     "animations_enabled_desktop": false,
     "cart_type": "drawer",
+    "limit_free_shipping": "2000",
     "product_currency_code_enabled": false,
     "checkout_logo_image": "shopify:\/\/shop_images\/160x80.jpg",
     "checkout_logo_position": "center",

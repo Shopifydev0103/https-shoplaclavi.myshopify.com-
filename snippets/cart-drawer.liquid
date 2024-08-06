@@ -83,6 +83,18 @@
           {% render 'icon-close' %}
         </button>
       </div>
+      <div class="cart-progress">
+        <div class="cart-progress-content">
+          <span>You are</span>
+          <strong class="shipping-rest-pay"></strong>
+          <span>away from free shipping</span>
+          <input id="limit_free_shipping" type="hidden" value="{{ settings.limit_free_shipping }}" name="shipping">
+        </div>
+        <div class="cart-progress-free--content">free shipping</div>
+        <div class="cart-progress-bar--wrapper">
+          <div class="cart-progress-bar-visialbe"></div>
+        </div>
+      </div>
       <cart-drawer-items
       {% if cart == empty %}
         class=" is-empty"

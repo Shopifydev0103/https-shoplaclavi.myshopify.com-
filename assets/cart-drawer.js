@@ -13,8 +13,30 @@ class QuantityInput extends HTMLElement {
     quantityUpdateUnsubscriber = undefined;
 
     connectedCallback() {
+        //freeshipping
+        const target = document.querySelectorAll('.price.price--end')
+        let totalPrice = 0; 
+
+        for (let i = 0; i < target.length; i++) {
+            const cartPrice = parseFloat(target[i].innerHTML.replace(/\$|,/g, ''));    
+            totalPrice += cartPrice;
+        }
+            const limitFreeShipping = document.querySelector('#limit_free_shipping').value;
+            const progressPercent = ( totalPrice / limitFreeShipping ) * 100;
+            const restPrice = limitFreeShipping - totalPrice;
+            if (limitFreeShipping > totalPrice) {
+                this.closest('.drawer__inner').querySelector('.shipping-rest-pay').innerHTML = `$${restPrice}`
+                this.closest('.drawer__inner').querySelector('.cart-progress-bar-visialbe').style.width = `${progressPercent}%`;
+            } else {      
+                this.closest('.drawer__inner').querySelector('.cart-progress-bar-visialbe').style.width = "100%";
+                this.closest('.drawer__inner').querySelector('.cart-progress-content').style.display = "none"
+                this.closest('.drawer__inner').querySelector('.cart-progress-free--content').style.display = "block"
+            }
+
         this.validateQtyRules();
         this.quantityUpdateUnsubscriber = subscribe(PUB_SUB_EVENTS.quantityUpdate, this.validateQtyRules.bind(this));
+
+
     }
 
     disconnectedCallback() {
@@ -259,3 +281,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+
+
+
+

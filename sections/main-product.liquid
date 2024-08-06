@@ -3,6 +3,31 @@
 
 {{ 'product-page.css' | asset_url | stylesheet_tag }}
 
+{% style %}
+  .complete-look-wrap .complete-look-title {
+    font-size: {{ section.settings.product_list_title }}px !important;
+  }
+  .complete-look-wrap .complete-look-col .prod-details h4 {
+    font-size: {{ section.settings.product_list_item_font }}px !important;
+  }
+  .complete-look-wrap .complete-look-col .prod-details .prod-price {
+    font-size: {{ section.settings.product_list_item_price }}px !important;
+  }
+
+
+  @media (max-width: 768px) {
+    .complete-look-wrap .complete-look-title {
+      font-size: {{ section.settings.product_list_title_mobile }}px !important;
+    }
+    .complete-look-wrap .complete-look-col .prod-details h4 {
+    font-size: {{ section.settings.product_list_item_font_mobile }}px !important;
+  }
+  .complete-look-wrap .complete-look-col .prod-details .prod-price {
+    font-size: {{ section.settings.product_list_item_price_mobile }}px !important;
+  }
+  }
+{% endstyle %}
+
 {% assign hasSizeOption = false %}
 {% for option in product.options_with_values %}
   {% if option.name contains "Size" %}
@@ -872,7 +897,7 @@
             </div>
           </div>
         </div>
-        <div class="product-detail-bottom custom-right">
+        <div class="product-detail-bottom custom-right {% if section.settings.product_list_row %} product_list_row{% endif %}">
           
             <div class="complete-look-wrap">
                           <div class="modal-close-wrap">
@@ -1177,6 +1202,72 @@
       {
         "type": "paragraph",
         "content": "Arrange product media by this option (all 'red' media together, then all 'blue' media together, for example). The first media in each group should be assigned to a variant. [Read more](https://cleancanvas.co.uk/support/general/grouped-variant-images)"
+      },
+      {
+        "type": "checkbox",
+        "id": "product_list_row",
+        "label": "Product list row - Complete the Look",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "product_list_title",
+        "min": 10,
+        "max": 60,
+        "step": 1,
+        "unit": "px",
+        "label": "Product list tile font-size",
+        "default": 48
+      },
+      {
+        "type": "range",
+        "id": "product_list_title_mobile",
+        "min": 10,
+        "max": 60,
+        "step": 1,
+        "unit": "px",
+        "label": "Mobile Product list tile font-size",
+        "default": 24
+      },
+      {
+        "type": "range",
+        "id": "product_list_item_font",
+        "min": 10,
+        "max": 40,
+        "step": 1,
+        "unit": "px",
+        "label": "Product list item font-size",
+        "default": 18
+      },
+      {
+        "type": "range",
+        "id": "product_list_item_font_mobile",
+        "min": 10,
+        "max": 40,
+        "step": 1,
+        "unit": "px",
+        "label": "Mobile Product list item font-size",
+        "default": 18
+      },
+      {
+        "type": "range",
+        "id": "product_list_item_price",
+        "min": 10,
+        "max": 40,
+        "step": 1,
+        "unit": "px",
+        "label": "Product list item price-size",
+        "default": 16
+      },
+      {
+        "type": "range",
+        "id": "product_list_item_price_mobile",
+        "min": 10,
+        "max": 40,
+        "step": 1,
+        "unit": "px",
+        "label": "Mobile Product list item price-size",
+        "default": 16
       }
     ],
     "blocks": [

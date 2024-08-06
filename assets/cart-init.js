@@ -36,6 +36,7 @@ class CartItems extends HTMLElement {
                 return;
             }
             this.onCartUpdate();
+            
         });
     }
 
@@ -55,6 +56,7 @@ class CartItems extends HTMLElement {
             .then((responseText) => {
                 const html = new DOMParser().parseFromString(responseText, 'text/html');
                 const sourceQty = html.querySelector('cart-items');
+                const limitFree = html.querySelector('.cart-progress-bar-visialbe');
                 this.innerHTML = sourceQty.innerHTML;
             })
             .catch((e) => {

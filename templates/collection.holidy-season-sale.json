@@ -93,8 +93,7 @@
         "overlay_style": "shadow",
         "slide_transition": "slide_fade",
         "slide_navigation": "dots",
-        "autoplay": true,
-        "autoplay_speed": 7
+        "autoplay": true
       }
     },
     "a1617f9b-ece9-4c02-8c2d-c6cce9f69b3e": {
