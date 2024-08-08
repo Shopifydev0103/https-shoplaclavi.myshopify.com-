@@ -6112,3 +6112,13 @@ div.mobile-navigation-drawer {
 }
 }
 
+.rimage-outer-wrapper.rimage-background{
+  aspect-ratio: 1.92;
+  width: 100%;
+}
+.rimage-background-wrapper.desktop-only .rimage-wrapper {
+  padding-top: unset !important;
+}
+#pageheader .logo-area.container {
+  min-height: 80px !important;
+}

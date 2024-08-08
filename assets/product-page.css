@@ -8,8 +8,8 @@ body.template-suffix-custom-product .section-main-product .container {
   max-width: 100% !important;
 }
 body.template-suffix-custom-product .section-main-product .product-detail .gallery-size-medium {
-    width: 50%;
-    flex: 0 0 50%;
+    width: 49.55%;
+    flex: 0 0 49.55%;
 }
 body.template-suffix-custom-product .section-main-product .gallery .sticky-content-container {
     top: 0;
