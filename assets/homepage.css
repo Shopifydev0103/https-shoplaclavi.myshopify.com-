@@ -1753,7 +1753,8 @@ body.template-suffix-custom-collection #content .container.cf {
   }
 
   .section-slideshow .slideshow .rimage-outer-wrapper {
-    min-height: 480px;
+    min-height: 100%;
+    aspect-ratio: 0.5175;
   }
 
   .shopify-section.section-slideshow .slideshow[data-transition="slide_fade"] .slide .overlay-text__inner {

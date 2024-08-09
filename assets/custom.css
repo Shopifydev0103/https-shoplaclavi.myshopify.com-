@@ -6122,3 +6122,9 @@ div.mobile-navigation-drawer {
 #pageheader .logo-area.container {
   min-height: 80px !important;
 }
+
+@media (max-width: 768px) {
+  #pageheader .logo-area.container {
+    min-height: 48px !important;
+  }
+}
