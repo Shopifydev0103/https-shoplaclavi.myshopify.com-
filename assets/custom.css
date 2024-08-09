@@ -159,7 +159,7 @@
 
 /*================================== Lookbook page starts ==================================*/
 .custom-rich-text.shopify-section.shopify-section div[class*="fully-spaced-row--"] {
-  margin-top: 200px;
+  margin-top: 128px;
 }
 
 .custom-rich-text.section-rich-text .container {
@@ -170,15 +170,15 @@
 
 .custom-rich-text.section-rich-text .container .large-text p {
   font-family: "IvyOra Display";
-  font-size: 120px;
-  line-height: 108px;
+  font-size: 72px;
+  line-height: 65px;
   margin: 0px;
   color: #000;
 }
 
 @media(max-width: 1460px) {
   .custom-rich-text.section-rich-text .container .large-text p {
-    line-height: 130px;
+    line-height: 65px;
   }
 }
 
@@ -350,13 +350,10 @@ body.template-suffix-stories-page .custom-rich-text.shopify-section.shopify-sect
 
 .stories-grid-wrap .stories-grid-row {
   display: flex;
-  flex-wrap: wrap;
   gap: 16px;
 }
 
 .stories-grid-wrap .stories-card {
-  max-width: calc(50% - 8px);
-  flex: 0 0 calc(50% - 8px);
   position: relative;
 }
 
@@ -1375,10 +1372,13 @@ cart-drawer#cart-drawer-right .continue-btn-wrap a {
   body.template-suffix-lookbook-page .custom-rich-text.shopify-section.shopify-section div[class*="fully-spaced-row--"] {
     margin: 48px 16px 24px;
   }
+  .stories-grid-wrap .stories-grid-row {
+    flex-direction: column;
+  }
 
   .custom-rich-text.section-rich-text .container .large-text p {
-    font-size: 56px !important;
-    line-height: 48px !important;
+    font-size: 40px !important;
+    line-height: 36px !important;
   }
 
   .lookbook-slider .slick-track .lookbook-slide {
