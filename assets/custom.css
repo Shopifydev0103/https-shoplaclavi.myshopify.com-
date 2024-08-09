@@ -871,7 +871,7 @@ body.template-suffix-contact-template .contact-right .lightly-spaced-row button 
 
 cart-drawer#cart-drawer-right.drawer {
   min-width: 495px;
-  top: 108px;
+  top: 80px;
   height: calc(100% - 108px) !important;
 }
 
@@ -917,6 +917,9 @@ cart-drawer#cart-drawer-right .drawer__inner {
 }
 
 cart-drawer#cart-drawer-right.drawer .drawer__header {
+  display: block;
+}
+#cart-drawer-right .drawer__header span {
   display: none;
 }
 
