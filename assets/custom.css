@@ -317,8 +317,8 @@ body.template-suffix-mission-page .custom-rich-text.shopify-section.shopify-sect
 
 .mission-image-text .mission-content p {
   font-family: IvyOra Display;
-  font-size: 50px;
-  line-height: 52px;
+  font-size: 34px;
+  line-height: 38px;
   font-weight: 400;
   color: #000000;
   letter-spacing: 0;
@@ -5978,6 +5978,7 @@ div.mobile-navigation-drawer {
       width: 70% !important;
       flex: 1 1 70%;
       padding:0 !important;
+      margin: auto 0;
     }  
    /* Mission Page 30/70*/
     .mission-image-text-row{
