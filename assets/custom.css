@@ -419,9 +419,6 @@ body.template-suffix-stories-page .custom-rich-text.shopify-section.shopify-sect
   color: #000000;
   letter-spacing: 0;
 }
-.brand-story-text .custom.text-col-title {
-  width: 70%;
-}
 
 .brand-story-text .right-col p {
   font-family: Halyard Display;
@@ -596,10 +593,10 @@ body.template-suffix-contact-template .contact-right .lightish-spaced-row {
 }
 
 body.template-suffix-contact-template .contact-right .lightish-spaced-row .rte p {
-  font-family: IvyOra Display;
-  font-size: 40px;
-  line-height: 47px;
-  font-weight: 400;
+  font-family: Halyard Display;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
   color: #000000;
 }
 
