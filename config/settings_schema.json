@@ -1186,6 +1186,12 @@
       },
       {
         "type": "text",
+        "id": "social_linkedin_url",
+        "label": "Linkedin",
+        "info": "https:\/\/linkedin.com\/shopify"
+      },
+      {
+        "type": "text",
         "id": "social_vimeo_url",
         "label": "Vimeo",
         "info": "https:\/\/vimeo.com\/shopify"

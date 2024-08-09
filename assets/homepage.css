@@ -809,7 +809,7 @@ body #pagefooter .copyright a {
 
 #pagefooter .section-footer .social-links a {
   margin-bottom: 0;
-  margin-right: 24px;
+  margin-right: 16px;
 }
 
 #pagefooter .section-footer__menu-block__menu li {
@@ -2110,7 +2110,7 @@ body.template-suffix-custom-collection #content .container.cf {
   }
 
   #pagefooter .section-footer__text-block__social li a {
-    margin-right: 13px !important;
+    margin-right: 12px !important;
   }
 
   #pagefooter .section-footer__menu-block__menu li {
