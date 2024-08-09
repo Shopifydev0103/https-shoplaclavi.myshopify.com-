@@ -171,7 +171,7 @@
 .custom-rich-text.section-rich-text .container .large-text p {
   font-family: "IvyOra Display";
   font-size: 72px;
-  line-height: 65px;
+  line-height: 65px !important;
   margin: 0px;
   color: #000;
 }
@@ -413,11 +413,14 @@ body.template-suffix-stories-page .custom-rich-text.shopify-section.shopify-sect
 .brand-story-text .left-col .text-col-title p {
   margin: 0;
   font-family: IvyOra Display;
-  font-size: 50px;
-  line-height: 52px;
+  font-size: 34px;
+  line-height: 38px;
   font-weight: 400;
   color: #000000;
   letter-spacing: 0;
+}
+.brand-story-text .custom.text-col-title {
+  width: 70%;
 }
 
 .brand-story-text .right-col p {
